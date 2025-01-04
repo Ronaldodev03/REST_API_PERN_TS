@@ -6,7 +6,9 @@
     "strict": false,
     "sourceMap": true,
     "esModuleInterop": true,
-    "declaration": true
+    "declaration": true,
+    "experimentalDecorators": true, // allow Decorators (in models)
+    "emitDecoratorMetadata": true // allow Decorators (in models)
   },
   "include": ["src/**/*.ts"]
 }
