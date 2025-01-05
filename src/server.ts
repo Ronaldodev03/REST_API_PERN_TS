@@ -1,5 +1,6 @@
 import express from "express";
 import colors from "colors";
+import router from "./router";
 import db from "./config/db";
 
 // Conectar a base de datos
@@ -17,5 +18,10 @@ connectDB();
 
 // Instancia de express
 const server = express();
+
+// Leer datos de formularios
+server.use(express.json());
+
+server.use("/api/products", router);
 
 export default server;
