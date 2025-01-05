@@ -1,6 +1,7 @@
 import express from "express";
 import colors from "colors";
 import cors, { CorsOptions } from "cors";
+import morgan from "morgan";
 import router from "./router";
 import db from "./config/db";
 
@@ -19,6 +20,8 @@ connectDB();
 
 // Instancia de express
 const server = express();
+
+server.use(morgan("dev"));
 
 // Permitir conexiones
 const corsOptions: CorsOptions = {
